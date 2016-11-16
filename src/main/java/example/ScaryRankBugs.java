@@ -7,7 +7,6 @@ package com.javacodegeeks.example.findBugsPluginExample;
  */
 
 public class ScaryRankBugs {
-
 	/** The check str value. */
 
 	private String checkStrValue = null;
@@ -45,23 +44,24 @@ public class ScaryRankBugs {
 	}
 
 	/**
+	 * 
+	 * Incorrect assignment in if condition.
+	 * 
+	 */
 
-     * Incorrect assignment in if condition.
+	private static void incorrectAssignmentInIfCondition() {
 
-     */
+		boolean value = false;
 
-    private static void incorrectAssignmentInIfCondition() {
+		if (value = true) {
 
-        boolean value = false;
+			// do Something
 
-        if (value = true) {
+		} else {
 
-            //do Something
+			// else Do Something
 
-        } else {
+		}
 
-            //else Do Something
-
-        }
-
-    }
+	}
+}
